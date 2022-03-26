@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseText(license) {
   if (license == "mit") {
     const licenseText = "MIT License, Copyright (c) 2022 John Martin";
     return licenseText;
@@ -20,7 +20,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "mit") {
-    const licenseLink = "https://choosealicense.com/licenses/mit/"
+    const licenseLink = "https://opensource.org/licenses/MIT"
     return licenseLink;
 
   } else if (license == "apache") {
@@ -31,11 +31,25 @@ function renderLicenseLink(license) {
     return '';
   }
 }
+function renderLicenseBadge(license) {
+  if (license == "mit") {
+    const licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    return licenseBadge;
+
+  } else if (license == "apache") {
+    const licenseBadge= "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](http://www.apache.org/licenses/)"
+    return licenseBadge;
+
+  } else {
+    return '';
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return(`<a href="${renderLicenseLink(license)}">${renderLicenseBadge(license)}</a>`);
+  // return(`<a href="${renderLicenseLink(license)}">${renderLicenseBadge(license)}</a>`);
+  return(`${renderLicenseBadge(license)} <br> <a href="${renderLicenseLink(license)}">${renderLicenseText(license)}</a>`);
 }
 
 // TODO: Create a function to generate markdown for README
@@ -47,7 +61,7 @@ const generateMarkdown = data => {
   console.log("Data:", data.arr_5);
   return `
   # <b>${data.arr_0}</b>
-  <p>${license}</p>
+  ${license}
 
   # <b>Table of Contents</b>
   - [Description](#description)
