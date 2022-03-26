@@ -5,15 +5,15 @@ const { writeFile } = require('./utils/generateReadme.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {question: "What is your project title?"},
-    {question: "Please describe this project:"},
-    {question: "How do you install the project project?"},
-    {question: "Why did you build this project?"},
-    {question: "What problem does it solve?"},
-    {question: "Select a License:"},
-    {question: "What third-party assets were required to build this project?"}
-    {question: "What is your GitHub username?"},
-    {question: "What is your email address?"}
+    {question: "What is your project title?"}, // 0
+    {question: "Please describe this project:"}, // 1
+    {question: "How do you install and run this project?"}, // 2
+    {question: "Why did you build this project?"}, // 3
+    {question: "What problem does it solve?"}, // 4
+    {question: "Select a License:"}, // 5
+    {question: "What third-party assets were required to build this project?"}, //6
+    {question: "What is your GitHub username?"}, //7
+    {question: "What is your email address?"} // 8
 ];
 
 
@@ -103,6 +103,45 @@ const init = arr => {
             filter(val) {
                 return val.toLowerCase();
             },
+            validate: projectTitleInput => {
+                if (projectTitleInput) {
+                    return true;
+                } else {
+                    console.log('Please provide a response!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'arr_6',
+            message: questions[6].question,
+            validate: projectTitleInput => {
+                if (projectTitleInput) {
+                    return true;
+                } else {
+                    console.log('Please provide a response!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'arr_7',
+            message: questions[7].question,
+            validate: projectTitleInput => {
+                if (projectTitleInput) {
+                    return true;
+                } else {
+                    console.log('Please provide a response!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'arr_8',
+            message: questions[8].question,
             validate: projectTitleInput => {
                 if (projectTitleInput) {
                     return true;

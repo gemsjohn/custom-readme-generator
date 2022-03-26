@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return(`<p>${renderLicenseBadge(license)}</p><p>${renderLicenseLink(license)}</p>`);
+  return(`<a href="${renderLicenseLink(license)}">${renderLicenseBadge(license)}</a>`);
 }
 
 // TODO: Create a function to generate markdown for README
@@ -43,37 +43,40 @@ const generateMarkdown = data => {
   if (!data) {
     return'';
   }
-  const test = renderLicenseSection(data.arr_5);
+  const license = renderLicenseSection(data.arr_5);
   console.log("Data:", data.arr_5);
   return `
-  # ${data.arr_0}
+  # <b>${data.arr_0}</b>
+  <p>${license}</p>
 
-  ## <h2>Description</h2>
-  ${data.arr_1}
-  
-  ## <h2>Table of Contents</h2>
+  # <b>Table of Contents</b>
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#Contributing)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## <h2>Installation</h2>
-  ${data.arr_2}
+  # Description
+  <p>${data.arr_1}</p>
 
-  ## <h2>Usage</h2>
-  ${data.arr_3}
-  ${data.arr_4}
+  # Installation
+  <p>${data.arr_2}</p>
 
-  ## <h2>License</h2>
-  <div>${test}</div>
+  # Usage
+  <p>${data.arr_3}</p>
+  <p>${data.arr_4}</p>
 
-  ## <h2>Contributing</h2>
+  # Contributing
+  <p>The following third-part asset(s) contribute to the production of this Node.js Readme Generator:</p>
+  <p>${data.arr_6}</p>
+
+  # Tests
   <p>placeholder</p>
-  ## <h2>Tests</h2>
 
-  ## <h2>Questions</h2>
+  # Questions
+  <p>Feel free to follow my GitHub account: <a href="https://github.com/${data.arr_7}">${data.arr_7}</a></p>
+  <p>If you have any questions about this project feel free to reach me at the following email address: ${data.arr_8}</p>
 
 `;
 }

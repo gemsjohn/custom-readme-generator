@@ -1,30 +1,33 @@
 
-  # 1
+  # <b>1</b>
+  <p><a href="https://choosealicense.com/licenses/mit/">MIT License, Copyright (c) 2022 John Martin</a></p>
 
-  ## <h2>Description</h2>
-  2
-  
-  ## <h2>Table of Contents</h2>
+  # <b>Table of Contents</b>
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#Contributing)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## <h2>Installation</h2>
-  3
+  # Description
+  <p>2</p>
 
-  ## <h2>Usage</h2>
-  4
-  5
+  # Installation
+  <p>3</p>
 
-  ## <h2>License</h2>
-  <div><p>MIT License, Copyright (c) 2022 John Martin</p><p>https://choosealicense.com/licenses/mit/</p></div>
+  # Usage
+  <p>4</p>
+  <p>5</p>
 
-  ## <h2>Contributing</h2>
+  # Contributing
+  <p>The following third-part asset(s) contribute to the production of this Node.js Readme Generator:</p>
+  <p>7</p>
+
+  # Tests
   <p>placeholder</p>
-  ## <h2>Tests</h2>
 
-  ## <h2>Questions</h2>
+  # Questions
+  <p>Feel free to follow my GitHub account: <a href="https://github.com/8">8</a></p>
+  <p>If you have any questions about this project feel free to reach me at the following email address: 9</p>
 
