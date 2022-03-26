@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const { generateMarkdown } = require('./utils/generateMarkdown.js');
+const { writeFile } = require('./utils/generateReadme.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -11,16 +13,18 @@ const questions = [
     {question: "What third-party assets were required to build this project?"}
 ];
 
-let arr = [];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(data) {
+//     generateMarkdown(data);
+//     // console.log("data: ", data);
+// }
 
 
 // TODO: Create a function to initialize app
-const init = questionArray => {
-    if (!questionArray) {
-        questionArray = [];
+const init = arr => {
+    if (!arr) {
+         arr = [];
     }
     return inquirer.prompt ([
         {
@@ -103,11 +107,12 @@ const init = questionArray => {
         }, 
     ])
     .then((answers) => {
-        console.log(answers);
+        // console.log(answers);
+        writeFile(generateMarkdown(answers));
     })
     .catch((error) => {
         if (error.isTtyError) {
-            console.log("Prompt couldn't be rendered int he current environment");
+            console.log("Prompt couldn't be rendered in the current environment");
         } else {
             console.log("Something else went wrong");
         }
