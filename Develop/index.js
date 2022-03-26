@@ -6,11 +6,14 @@ const { writeFile } = require('./utils/generateReadme.js');
 // TODO: Create an array of questions for user input
 const questions = [
     {question: "What is your project title?"},
+    {question: "Please describe this project:"},
+    {question: "How do you install the project project?"},
     {question: "Why did you build this project?"},
     {question: "What problem does it solve?"},
-    {question: "What did you learn?"},
-    {question: "How do you install your project?"},
+    {question: "Select a License:"},
     {question: "What third-party assets were required to build this project?"}
+    {question: "What is your GitHub username?"},
+    {question: "What is your email address?"}
 ];
 
 
@@ -93,9 +96,13 @@ const init = arr => {
             }
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'arr_5',
             message: questions[5].question,
+            choices: ['MIT', 'Apache', 'None'],
+            filter(val) {
+                return val.toLowerCase();
+            },
             validate: projectTitleInput => {
                 if (projectTitleInput) {
                     return true;
