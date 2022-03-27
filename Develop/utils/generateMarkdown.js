@@ -57,7 +57,7 @@ const generateMarkdown = data => {
   if (!data) {
     return'';
   }
-  const license = renderLicenseSection(data.arr_5);
+  const license = renderLicenseBadge(data.arr_5);
   console.log("Data:", data.arr_5);
   return `
   # <b>${data.arr_0}</b>
@@ -83,14 +83,11 @@ const generateMarkdown = data => {
   <p>${data.arr_4}</p>
 
   # License
-  <a href="${renderLicenseLink(license)}">${renderLicenseText(license)}</a>
+  <p><a href="${renderLicenseLink(data.arr_5)}">${renderLicenseText(data.arr_5)}</a></p>
 
   # Contributing
-  <p>The following third-part asset(s) contribute to the production of this Node.js Readme Generator:</p>
+  <p>The following third-party asset(s) contribute to the production of this Node.js Readme Generator:</p>
   <p>${data.arr_6}</p>
-
-  # Tests
-  <p>placeholder</p>
 
   # Questions
   <p>Feel free to follow my GitHub account: <a href="https://github.com/${data.arr_7}">${data.arr_7}</a></p>

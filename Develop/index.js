@@ -16,14 +16,6 @@ const questions = [
     {question: "What is your email address?"} // 8
 ];
 
-
-// TODO: Create a function to write README file
-// function writeToFile(data) {
-//     generateMarkdown(data);
-//     // console.log("data: ", data);
-// }
-
-
 // TODO: Create a function to initialize app
 const init = arr => {
     if (!arr) {
@@ -153,7 +145,6 @@ const init = arr => {
         }, 
     ])
     .then((answers) => {
-        // console.log(answers);
         writeFile(generateMarkdown(answers));
     })
     .catch((error) => {
