@@ -1,11 +1,12 @@
 
-  # <b>12</b>
-   <br> <a href=""></a>
+  # <b>1</b>
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](http://www.apache.org/licenses/)
 
   # <b>Table of Contents</b>
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [License](#License)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -19,6 +20,9 @@
   # Usage
   <p>4</p>
   <p>5</p>
+
+  # License
+  <a href=""></a>
 
   # Contributing
   <p>The following third-part asset(s) contribute to the production of this Node.js Readme Generator:</p>

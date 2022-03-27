@@ -49,7 +49,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   // return(`<a href="${renderLicenseLink(license)}">${renderLicenseBadge(license)}</a>`);
-  return(`${renderLicenseBadge(license)} <br> <a href="${renderLicenseLink(license)}">${renderLicenseText(license)}</a>`);
+  return(`${renderLicenseBadge(license)}`);
 }
 
 // TODO: Create a function to generate markdown for README
@@ -67,6 +67,7 @@ const generateMarkdown = data => {
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [License](#License)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -80,6 +81,9 @@ const generateMarkdown = data => {
   # Usage
   <p>${data.arr_3}</p>
   <p>${data.arr_4}</p>
+
+  # License
+  <a href="${renderLicenseLink(license)}">${renderLicenseText(license)}</a>
 
   # Contributing
   <p>The following third-part asset(s) contribute to the production of this Node.js Readme Generator:</p>
